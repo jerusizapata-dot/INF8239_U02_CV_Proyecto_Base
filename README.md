@@ -37,8 +37,8 @@ Ambos modelos fueron entrenados con Adam y entropía cruzada categórica dispers
 
 | Modelo | F1 macro | Parámetros | Entrenamiento | Inferencia por imagen |
 |---|---:|---:|---:|---:|
-| Dense baseline | 0.8637 | 50,890 | 9.75 s | 0.0569 ms |
-| CNN | 0.7900 | 19,466 | 79.01 s | 0.1212 ms |
+| Dense baseline | 0.8637 | 50,890 | 8.7643 s | 0.0480 ms |
+| CNN | 0.7900 | 19,466 | 77.1246 s | 0.1259 ms |
 
 En esta ejecución, el baseline Dense obtuvo un F1 macro superior al CNN: **0.8637 frente a 0.7900**. La CNN utilizó aproximadamente 62% menos parámetros, pero presentó un mayor costo de entrenamiento e inferencia.
 
@@ -57,7 +57,7 @@ En esta ejecución, el baseline Dense obtuvo un F1 macro superior al CNN: **0.86
 | 8 | 0.917 | 0.937 | 0.927 |
 | 9 | 0.934 | 0.896 | 0.915 |
 
-La clase 6 fue la más difícil para la CNN, con **recall de 0.370 y F1 de 0.428**. Sus principales confusiones fueron las clases 0, 4 y 2.
+La clase 6 fue la más difícil para la CNN, con **recall de 0.370 y F1 de 0.428**. Sus principales confusiones fueron las clases 0, 4 y 2; también se observaron errores hacia las clases 8 y 3.
 
 
 ## Evidencia visual
@@ -200,5 +200,5 @@ Comando utilizado:
 uv run pytest -q
 ```
 
-Resultado previo al entrenamiento: **3 pruebas aprobadas**.
+Resultado final verificado: **3 pruebas aprobadas en 4.95 s**.
 
