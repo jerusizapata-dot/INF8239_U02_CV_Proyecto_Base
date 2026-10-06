@@ -200,5 +200,5 @@ Comando utilizado:
 uv run pytest -q
 ```
 
-Resultado final verificado: **3 pruebas aprobadas en 4.95 s**.
+Resultado final verificado: **3 pruebas aprobadas en 4.99 s**.
 
